@@ -23,6 +23,7 @@ void MakeDecision()
         chosenField = Console.ReadLine();
         
     } while (chosenField == "");
+    //TODO End Decision
 }
 
 void ShowGameFieldsGrid()
