@@ -3,6 +3,7 @@ bool isGameOn = true;
 bool isPlayerOneTurn = true;
 string actuallPlayerSymbol;
 string[,] gameFields = new string[3,3];
+string[] correctAnswer = {"1","2","3","4","5","6","7","8","9"};
 
 //Program core
 ResetGameFields();
