@@ -18,12 +18,19 @@ while (isGameOn)
 void MakeDecision()
 {
     string? chosenField = "";
+    bool wrongAnswer = true;
     do
     {
         Console.Write("Pick a field by choosing the number: ");
         chosenField = Console.ReadLine();
-        
-    } while (chosenField == "");
+        foreach (var possibleAnswer in correctAnswer)
+        {
+            if(chosenField == possibleAnswer){
+                wrongAnswer = false;
+                Console.WriteLine("Wrong character");
+            }
+        }
+    } while (wrongAnswer);
     
 }
 
