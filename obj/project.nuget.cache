@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MEg9fL5EPMC+L5Z8Rgh6FJncXDlN/gB/CSMPuuaf2lBkv+Ba8Tj60k7PHsnIhtFKb2QlSwa6r8+HPi4Q+w964g==",
+  "dgSpecHash": "U2SRRm1hV/1SeJ/x5t3Tx8vqqZjoD59wRgILTnonlDkVydnsIurtoBSsqUZ7C/H+heh4dwqT391QUl4wIveyMw==",
   "success": true,
-  "projectFilePath": "/Users/miloszp/Projects/tictactoe/tictactoe.csproj",
+  "projectFilePath": "E:\\Programowanie\\C#Masterclass\\tictactoe\\tictactoe.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
