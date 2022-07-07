@@ -1,23 +1,68 @@
 ﻿//Variables
-bool isGameOn = true;
+bool isRoundOn = true;
 bool isPlayerOneTurn = true;
 string actuallPlayerSymbol = "0";
 string[,] gameFields = new string[3,3];
 
 //Program core
-ResetGameFields();
-
-while (isGameOn)
+while (true)
 {
+    ResetGameFields();
     ShowGameFieldsGrid();
-    SymbolChange();
-    MakeDecision();
-    CheckIfPlayerWon();
+    
+    while (isRoundOn)
+    {
+        SymbolChange();
+        MakeDecision();
+        CheckIfPlayerWon();
+        ShowGameFieldsGrid();
+    }
+    Console.WriteLine("Do you want to play again?");
+    //TODO Restart function
 }
 
 void CheckIfPlayerWon()
 {
-    //TODO Win condition
+    if (gameFields[0,0] == gameFields[0,1] && gameFields[0,1] == gameFields[0,2])
+    {
+        Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
+        isRoundOn = false;
+    }
+    if (gameFields[1,0] == gameFields[1,1] && gameFields[1,1] == gameFields[1,2])
+    {
+        Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
+        isRoundOn = false;
+    }
+    if (gameFields[2,0] == gameFields[2,1] && gameFields[2,1] == gameFields[2,2])
+    {
+        Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
+        isRoundOn = false;
+    }
+    if (gameFields[0,0] == gameFields[1,0] && gameFields[1,0] == gameFields[2,0])
+    {
+        Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
+        isRoundOn = false;
+    }
+    if (gameFields[0,1] == gameFields[1,1] && gameFields[1,1] == gameFields[2,1])
+    {
+        Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
+        isRoundOn = false;
+    }
+    if (gameFields[0,2] == gameFields[1,2] && gameFields[1,2] == gameFields[2,2])
+    {
+        Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
+        isRoundOn = false;
+    }
+    if (gameFields[0,0] == gameFields[1,1] && gameFields[1,1] == gameFields[2,2])
+    {
+        Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
+        isRoundOn = false;
+    }
+    if (gameFields[0,2] == gameFields[1,1] && gameFields[1,1] == gameFields[2,0])
+    {
+        Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
+        isRoundOn = false;
+    }
 }
 
 void MakeDecision()
@@ -90,6 +135,7 @@ bool CheckIsFieldIsFree(bool wrongAnswer, string pickedField)
 
 void ShowGameFieldsGrid()
 {
+    Console.Write("\n");
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
