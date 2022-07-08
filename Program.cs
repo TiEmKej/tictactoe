@@ -5,61 +5,89 @@ string actuallPlayerSymbol = "0";
 string[,] gameFields = new string[3,3];
 
 //Program core
-while (true)
+while (isRoundOn)
 {
     ResetGameFields();
-    ShowGameFieldsGrid();
     
     while (isRoundOn)
     {
         SymbolChange();
+        ShowGameFieldsGrid();
         MakeDecision();
         CheckIfPlayerWon();
-        ShowGameFieldsGrid();
     }
-    Console.WriteLine("Do you want to play again?");
-    //TODO Restart function
+    AskForRestart(); 
+}
+
+void AskForRestart()
+{
+    while (true)
+    {
+        Console.WriteLine("Do you want to play again?\nYes/No: ");
+        string? answer = Console.ReadLine();
+        if (answer == "Yes")
+        {
+            isRoundOn = true;
+            break;
+        }
+        else if (answer == "No")
+        {
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Wrong input! Try again!");
+        }
+    }
 }
 
 void CheckIfPlayerWon()
 {
     if (gameFields[0,0] == gameFields[0,1] && gameFields[0,1] == gameFields[0,2])
     {
+        ShowGameFieldsGrid();
         Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
         isRoundOn = false;
     }
     if (gameFields[1,0] == gameFields[1,1] && gameFields[1,1] == gameFields[1,2])
     {
+        ShowGameFieldsGrid();
         Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
         isRoundOn = false;
     }
     if (gameFields[2,0] == gameFields[2,1] && gameFields[2,1] == gameFields[2,2])
     {
+        ShowGameFieldsGrid();
         Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
         isRoundOn = false;
     }
     if (gameFields[0,0] == gameFields[1,0] && gameFields[1,0] == gameFields[2,0])
     {
+        ShowGameFieldsGrid();
         Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
         isRoundOn = false;
     }
     if (gameFields[0,1] == gameFields[1,1] && gameFields[1,1] == gameFields[2,1])
     {
+        ShowGameFieldsGrid();
         Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
         isRoundOn = false;
     }
     if (gameFields[0,2] == gameFields[1,2] && gameFields[1,2] == gameFields[2,2])
     {
+        ShowGameFieldsGrid();
         Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
         isRoundOn = false;
     }
     if (gameFields[0,0] == gameFields[1,1] && gameFields[1,1] == gameFields[2,2])
     {
+        ShowGameFieldsGrid();
         Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
         isRoundOn = false;
     }
     if (gameFields[0,2] == gameFields[1,1] && gameFields[1,1] == gameFields[2,0])
     {
+        ShowGameFieldsGrid();
         Console.WriteLine("Player '{0}' won!", actuallPlayerSymbol);
         isRoundOn = false;
     }
@@ -70,7 +98,7 @@ void MakeDecision()
     //Function Variables
     string? chosenField = "";
     bool wrongAnswer = true;
-
+    Console.WriteLine("Player '{0}' turn", actuallPlayerSymbol);
     do
     {
         //Take input from user
@@ -135,6 +163,7 @@ bool CheckIsFieldIsFree(bool wrongAnswer, string pickedField)
 
 void ShowGameFieldsGrid()
 {
+    Console.Clear();
     Console.Write("\n");
     for (int i = 0; i < 3; i++)
     {
@@ -172,5 +201,4 @@ void SymbolChange()
         actuallPlayerSymbol = "X";
         isPlayerOneTurn = true;
     }
-    Console.WriteLine("Player '{0}' turn", actuallPlayerSymbol);
 }
