@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lLIYIabnY0hQfhG9P3y38I1fBlh0EULzMppkRI7ShkLPYi2XsNuyMA0vH+Tt/qEKumjxo3Tbqcy7ebDR9gci8w==",
+  "dgSpecHash": "9kDlC5hCVjdo831CCPg5ZeWMJ0PTc50fK4KuO6YSStFW0UxIfzmHFZLdrDcO7cQxIO7YNzD5CkGPPNfpMks/Cg==",
   "success": true,
-  "projectFilePath": "/Users/miloszp/Projects/tictactoe/tictactoe.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\Programowanie\\C#Masterclass\\tictactoe\\tictactoe.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\milos\\.nuget\\packages\\microsoft.netcore.app.host.osx-x64\\6.0.5\\microsoft.netcore.app.host.osx-x64.6.0.5.nupkg.sha512"
+  ],
   "logs": []
 }
