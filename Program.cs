@@ -119,57 +119,38 @@ void CheckIfPlayerWon()
 void MakeDecision()
 {
     //Function Variables
-    string? chosenField = "";
     bool wrongAnswer = true;
+    string? pickedField;
+    int fieldNumber;
     Console.WriteLine("Player '{0}' turn", actuallPlayerSymbol);
+    
     do
     {
         //Take input from user
         Console.Write("Pick a field by choosing the number: ");
-        chosenField = Console.ReadLine();
-
+        pickedField = Console.ReadLine();
+        
         //Check if input is any of valid characters
-        switch (chosenField)
+        if (int.TryParse(pickedField, out fieldNumber))
         {
-            case "1":
-                wrongAnswer = CheckIsFieldIsFree(wrongAnswer, chosenField);
-                break;
-            case "2":
-                wrongAnswer = CheckIsFieldIsFree(wrongAnswer, chosenField);
-                break;
-            case "3":
-                wrongAnswer = CheckIsFieldIsFree(wrongAnswer, chosenField);
-                break;
-            case "4":
-                wrongAnswer = CheckIsFieldIsFree(wrongAnswer, chosenField);
-                break;
-            case "5":
-                wrongAnswer = CheckIsFieldIsFree(wrongAnswer, chosenField);
-                break;
-            case "6":
-                wrongAnswer = CheckIsFieldIsFree(wrongAnswer, chosenField);
-                break;
-            case "7":
-                wrongAnswer = CheckIsFieldIsFree(wrongAnswer, chosenField);
-                break;
-            case "8":
-                wrongAnswer = CheckIsFieldIsFree(wrongAnswer, chosenField);
-                break;
-            case "9":
-                wrongAnswer = CheckIsFieldIsFree(wrongAnswer, chosenField);
-                break;
-            default: 
-                break;
+            if (fieldNumber >= 1 && fieldNumber <= 9)
+            {
+                wrongAnswer = CheckIsFieldIsFree(Convert.ToString(fieldNumber));
+            }
+            else
+            {
+                Console.WriteLine("Value is to big!");
+            }
         }
-        if (wrongAnswer)
+        else
         {
-            Console.WriteLine("Wrong character or place");
+            Console.WriteLine("Wrong char used!");
         }
     } while (wrongAnswer);
     
 }
 
-bool CheckIsFieldIsFree(bool wrongAnswer, string pickedField)
+bool CheckIsFieldIsFree(string pickedField)
 {
     for (int i = 0; i < 3; i++)
     {
@@ -181,6 +162,7 @@ bool CheckIsFieldIsFree(bool wrongAnswer, string pickedField)
             }
         }
     }
+    Console.WriteLine("Choosen field is occupied");
     return true;
 }
 
