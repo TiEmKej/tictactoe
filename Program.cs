@@ -15,8 +15,31 @@ while (isRoundOn)
         ShowGameFieldsGrid();
         MakeDecision();
         CheckIfPlayerWon();
+        CheckIfAnyPlaceClear();
     }
     AskForRestart(); 
+}
+
+void CheckIfAnyPlaceClear()
+{
+    if(isRoundOn == false)
+    {
+        return;
+    }
+    bool noDraw = false;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            if(gameFields[i,j] != "X" && gameFields[i,j] != "O")
+            {
+                noDraw = true;
+            }
+        }
+    }
+    isRoundOn = noDraw;
+    ShowGameFieldsGrid();
+    Console.WriteLine("Draw!");
 }
 
 void AskForRestart()
@@ -169,10 +192,23 @@ void ShowGameFieldsGrid()
     {
         for (int j = 0; j < 3; j++)
         {
+            if(gameFields[i,j] == "O")
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+            }
+            else if (gameFields[i,j] == "X")
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+            else 
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
             Console.Write("\t" + gameFields[i,j]);
         }
         Console.Write("\t\n\n");
     }
+    Console.ForegroundColor = ConsoleColor.Gray;
 }
 
 void ResetGameFields()

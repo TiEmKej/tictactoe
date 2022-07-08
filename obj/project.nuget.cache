@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FZqlhipeS9h2fD7SlSwxG/mknd8hInKz8Fqt3V/Pi/8TxU0qiJapLIESh/pCb7WCtlqb2z9svBE6DbyvWnssYA==",
+  "dgSpecHash": "lLIYIabnY0hQfhG9P3y38I1fBlh0EULzMppkRI7ShkLPYi2XsNuyMA0vH+Tt/qEKumjxo3Tbqcy7ebDR9gci8w==",
   "success": true,
   "projectFilePath": "/Users/miloszp/Projects/tictactoe/tictactoe.csproj",
-  "expectedPackageFiles": [
-    "/Users/miloszp/.nuget/packages/microsoft.netcore.app.runtime.osx-arm64/6.0.6/microsoft.netcore.app.runtime.osx-arm64.6.0.6.nupkg.sha512",
-    "/Users/miloszp/.nuget/packages/microsoft.aspnetcore.app.runtime.osx-arm64/6.0.6/microsoft.aspnetcore.app.runtime.osx-arm64.6.0.6.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
