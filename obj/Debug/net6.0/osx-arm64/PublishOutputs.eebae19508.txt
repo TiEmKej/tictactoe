@@ -1,5 +1,0 @@
-/Users/miloszp/Projects/tictactoe/bin/Debug/net6.0/osx-arm64/publish/tictactoe
-/Users/miloszp/Projects/tictactoe/bin/Debug/net6.0/osx-arm64/publish/tictactoe.dll
-/Users/miloszp/Projects/tictactoe/bin/Debug/net6.0/osx-arm64/publish/tictactoe.deps.json
-/Users/miloszp/Projects/tictactoe/bin/Debug/net6.0/osx-arm64/publish/tictactoe.runtimeconfig.json
-/Users/miloszp/Projects/tictactoe/bin/Debug/net6.0/osx-arm64/publish/tictactoe.pdb

@@ -1,5 +1,0 @@
-E:\Programowanie\C#Masterclass\tictactoe\bin\Debug\net6.0\osx-x64\publish\tictactoe
-E:\Programowanie\C#Masterclass\tictactoe\bin\Debug\net6.0\osx-x64\publish\tictactoe.dll
-E:\Programowanie\C#Masterclass\tictactoe\bin\Debug\net6.0\osx-x64\publish\tictactoe.deps.json
-E:\Programowanie\C#Masterclass\tictactoe\bin\Debug\net6.0\osx-x64\publish\tictactoe.runtimeconfig.json
-E:\Programowanie\C#Masterclass\tictactoe\bin\Debug\net6.0\osx-x64\publish\tictactoe.pdb
